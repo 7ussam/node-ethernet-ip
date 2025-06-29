@@ -1,3 +1,4 @@
+import data, { Controller, Tag } from './src/index';
 // Intantiate Controller
 const PLC = new Controller();
 
@@ -8,7 +9,7 @@ PLC.subscribe(new Tag("TEST_REAL", "Prog"));
 PLC.subscribe(new Tag("TEST_BOOL", "Prog"));
 
 // Connect to PLC at IP, SLOT
-PLC.connect("192.168.2.23", 5).then(() => {
+PLC.connectct("192.168.2.23", 5).then(() => {
     const { name } = PLC.properties;
 
     // Log Connected to Console
